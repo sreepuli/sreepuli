@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class quadratic{
+	public static void main (String[] args){
+	Scanner input = new Scanner(System.in);
+	System .out.println("Enter the value of a :");
+	double a = input.nextDouble();
+	System .out.println("Enteer the value of b :");
+	double b = input.nextDouble();
+	System .out.println(" Enter the value of c ;");
+	double c = input.nextDouble();
+	double D = b*b-4*a*c;
+	if(D>0){
+	double root1 = (-b + Math.sqrt(D))/2*a;
+	double root2= (-b -Math.sqrt(D))/2*a;
+	System.out.printf("root1 = %2f and root2 = %2f",root1, root2);
+	System.out.println("roots are real and distinct");
+	}
+	else if(D==0){
+	 double root1= -b/2*a;
+	System . out.printf("root1=root2=%2f",root1);
+	System.out.println("root are equal");
+	}
+	else{
+	double real= -b/(2*a);
+	double imaginary= Math.sqrt(D)/(2*a);
+	System . out.printf("root1=%2f+%.2fi",real,imaginary);
+	System.out.printf("root2=%2f-%.2fi",real,imaginary);
+	System.out.println("roots are imaginary ");
+	}
+}
+	
+}
+
